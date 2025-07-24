@@ -1,0 +1,255 @@
+---
+let isOpen = false;
+function toggleMenu() {
+  isOpen = !isOpen;
+}
+---
+
+<div class="main-container">
+  <div class="g"></div>
+
+  <!-- Hamburger Button (Mobile Only) -->
+  <button class="hamburger" id="menuToggle" aria-label="Toggle Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="frame-1" id="menuContent">
+    <div class="frame-2">
+      <div class="nav-item">
+        <span class="navigation-item">About</span><div
+          class="icon-navigation-caret-down"
+        >
+        </div>
+      </div>
+      <div class="nav-item-3">
+        <span class="navigation-item-4">Services</span><div
+          class="icon-navigation-caret-down-5"
+        >
+        </div>
+      </div>
+      <div class="nav-item-6">
+        <span class="resources">Resources</span><div
+          class="icon-navigation-caret-down-7"
+        >
+        </div>
+      </div>
+      <div class="nav-item-8">
+        <span class="pricing">Pricing</span><div
+          class="icon-navigation-caret-down-9"
+        >
+        </div>
+      </div>
+      <div class="nav-item-a">
+        <span class="navigation-item-b">Contact Us</span><div
+          class="icon-navigation-caret-down-c"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="component">
+    <div class="button">
+      <span class="text">Get In Touch</span>
+      <div class="icon-navigation-arrow"></div>
+    </div>
+  </div>
+</div>
+
+<style scoped>
+  .main-container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 12px 20px;
+    background: #0e2726;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .main-container * {
+    box-sizing: border-box;
+  }
+
+  .g {
+    flex-shrink: 0;
+    width: 120px;
+    height: 60px;
+    background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-24/Q2SzUErAR8.png)
+      no-repeat center;
+    background-size: 100% 100%;
+    padding: 8px; /* Add padding around logo */
+  }
+
+  .component {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 50px;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #ed7c00;
+    border-radius: 50px;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+  }
+
+  .text {
+    color: #fff;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+
+  .icon-navigation-arrow {
+    width: 20px;
+    height: 20px;
+    background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-24/UJ3MXTe1kX.png)
+      no-repeat center;
+    background-size: cover;
+  }
+
+  .frame-1 {
+    display: flex;
+  }
+
+  .frame-2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-item,
+  .nav-item-3,
+  .nav-item-6,
+  .nav-item-8,
+  .nav-item-a {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 8px 12px;
+  }
+
+  .navigation-item,
+  .navigation-item-4,
+  .resources,
+  .pricing,
+  .navigation-item-b {
+    color: #fff;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+
+  .icon-navigation-caret-down,
+  .icon-navigation-caret-down-5,
+  .icon-navigation-caret-down-7,
+  .icon-navigation-caret-down-9,
+  .icon-navigation-caret-down-c {
+    width: 14px;
+    height: 14px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .icon-navigation-caret-down {
+    background-image: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-24/NyQJNCxFtX.png);
+  }
+  .icon-navigation-caret-down-5 {
+    background-image: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-24/Qa0z7Liz6h.png);
+  }
+  .icon-navigation-caret-down-7 {
+    background-image: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-24/FwrVRcgXpu.png);
+  }
+  .icon-navigation-caret-down-9 {
+    background-image: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-24/pSsSgtv1rg.png);
+  }
+  .icon-navigation-caret-down-c {
+    background-image: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-24/nzBVFUb9ai.png);
+  }
+
+  /* Hamburger styles */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2px;
+    background: #fff;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .g {
+      width: 90px; /* Decrease logo width */
+      height: 45px; /* Decrease logo height */
+      padding: 40px; /* Keep padding on mobile */
+      margin-left: 10px;
+    }
+
+    .frame-1 {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100vw; /* Use viewport width for full overlay */
+      flex-direction: column;
+      background: #0e2726;
+      padding: 0; /* Remove padding for full width */
+      z-index: 100;
+    }
+
+    .frame-1.open {
+      display: flex;
+    }
+
+    .frame-2 {
+      flex-direction: column; /* Stack menu items vertically */
+      gap: 0; /* Optional: reduce gap for vertical menu */
+    }
+
+    .main-container {
+      padding: 0; /* Remove horizontal padding for mobile */
+    }
+
+    .component {
+      display: none; /* Hide Get In Touch button on mobile */
+      margin-right: 8px;
+    }
+
+    .hamburger {
+      display: flex;
+      padding-right: 16px; /* Add right padding to hamburger */
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("menuContent");
+
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+    }
+  });
+</script>
